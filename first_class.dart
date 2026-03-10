@@ -138,12 +138,7 @@ switch(userRole) {
   default:
   print('Invalid Role');
 
-  try{
-    List<int> arr = [1,2,3,4];
-    print(arr[5]);
-  }catch(error) {
-    print(error);
-  }
+
 
 }
 
