@@ -199,13 +199,42 @@
 
 
 
-void main(){
+// void main(){
 
-  Manager manage = Manager('Huzaifa', 4321);
+//   Manager manage = Manager('Huzaifa', 4321);
 
-  manage.displayInfo();
-  manage.devInfo();
-  manage.managerInfo();
+//   manage.displayInfo();
+//   manage.devInfo();
+//   manage.managerInfo();
 
 
+// }
+
+
+
+mixin Manger {
+  void managerIngo(){
+    print('Hey Manager!');
+  }
+}
+
+mixin Director {
+  void directorInfo() {
+    print('Hey Director!');
+  }
+}
+
+
+class Employee with Manger,Director {
+  void employeeInfo() {
+    print('Hey Ali');
+  }
+}
+
+
+void main() {
+  Employee emp = Employee();
+  emp.employeeInfo();
+  emp.directorInfo();
+  emp.managerIngo();
 }
